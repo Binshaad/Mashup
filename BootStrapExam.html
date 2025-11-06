@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body class="bg-light">
+  <div class="container-fluid bg-primary d-flex flex-column justify-content-center align-items-center  vh-100 p-3 w-lg-75 ">
+    
+    
+    <div class="card shadow p-5  rounded-lg mb-3 w-75 h-75">
+      <h1 class="mb-3 fw-bold"><b>Sign Up</b></h1>
+      <p class="mb-4 text-secondary">Please fill in this form to create an account</p>
+
+      <form action="signup">
+        <div class="form-row">
+          <div class="form-group col-md-6 ">
+            <input type="text" id="firstName" class="form-control border-0 bg-light " placeholder="FIRST NAME" required>
+          </div>
+          <div class="form-group col-md-6">
+            <input type="text" id="lastName" class="form-control border-0 bg-light" placeholder="LAST NAME" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="email" id="email" class="form-control border-0 bg-light" placeholder="EMAIL" required>
+        </div>
+
+        <div class="form-group">
+          <input type="password" id="password" class="form-control border-0 bg-light" placeholder="PASSWORD" required>
+        </div>
+
+        <div class="form-group">
+          <input type="password" id="confpassword" class="form-control border-0 bg-light" placeholder="CONFIRM PASSWORD" required>
+        </div>
+
+        <div class="form-group form-check d-flex align-items-center">
+  <input type="checkbox" id="checkbox" class="form-check-input me-2" required>
+  <label class="form-check-label mb-0" for="checkbox">
+    <span class="text-muted">
+      I accept the 
+      <a href="https://termly.io/resources/templates/terms-of-use-template/" class="text-primary text-decoration-underline">Terms of Use</a> &
+      <a href="https://www.websitepolicies.com/blog/sample-privacy-policy-template" class="text-primary text-decoration-underline">Privacy Policy</a>
+    </span>
+  </label>
+</div>
+
+        <button type="submit" class="btn btn-primary active mt-3 px-5">Sign Up</button>
+      </form>
+    </div>
+       <p class="text-light">Already have an account? <a href="https://www.stealmylogin.com/demo.html" class="text-white"><u>Login here</u></a></p>
+
+  </div>
+</body>
+</html>
