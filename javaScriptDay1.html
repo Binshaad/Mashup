@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online store</title>
+</head>
+<body>
+    <h1>Online store</h1>
+    <h3 id="tshirt">T-Shirt</h3>
+    <h3 id="cap">cap</h3>
+    <h3 id="tshirtTotal"></h3>
+    <h3 id="capTotal"></h3>
+    <h3 id="totalPrice"></h3>
+    <h3 id="ChangePrice"></h3>
+    <h3 id="Changaleprice"></h3>
+
+
+    <script type="text/javascript">
+var tshirt=5;
+var cap=3;
+var tshirtPrice=400;
+var capPrice=150
+var tshirtTotal=tshirt * tshirtPrice;
+var capTotal=cap * capPrice;
+var totalPrice=tshirtTotal+capTotal
+
+
+var changeTshirt=450;
+var changablePrice= cap*changeTshirt
+
+document.getElementById("tshirt").innerHTML=tshirt
+document.getElementById("cap").innerHTML=cap
+
+document.getElementById("tshirtTotal").innerHTML="The total of the T shirt :" + tshirtTotal
+document.getElementById("capTotal").innerHTML="Tota price of the  cap :" + capTotal
+
+document.getElementById("totalPrice").innerHTML="Total price if the both cap and T shirt:"+totalPrice
+document.getElementById("ChangePrice").innerHTML= changeTshirt
+document.getElementById("Changaleprice").innerHTML= changablePrice
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
