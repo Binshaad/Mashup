@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Calculator</title>
+</head>
+<body>
+    <h1>Items</h1>
+    <ul>
+        <li id="rice">Rice</li>
+        <li id="sugar">Sugar</li>
+        <li id="wheat">Wheat</li>
+    </ul>
+    <h3 id="riceQdty"></h3>
+    <h3 id="sugarQdty"></h3>
+    <h3 id="wheatQdty"></h3>
+
+    <h2 id="riceTotal"></h2>
+    <h2 id="sugarTotal"></h2>
+    <h2 id="wheatTotal"></h2>
+
+    <h1 id="total"></h1>
+     <h1 id="ChangeTotal"></h1>
+
+
+    <script type="text/javascript">
+var riceQdty=2;
+var sugarQdty=2;
+var wheatQdty=2;
+
+var ricePrice=35;
+var sugarPrice=43;
+var wheatPrice=28;
+
+var riceTotal= riceQdty*ricePrice;
+var sugarTotal=sugarQdty*sugarPrice;
+var wheatTotal=wheatQdty*wheatPrice;
+
+var total=riceTotal+sugarTotal+wheatTotal;
+
+var ricechangePrice=39;
+var riceChangeTotal=riceQdty*ricechangePrice;
+
+var changeTotal=riceChangeTotal+sugarTotal+wheatTotal;
+
+document.getElementById( "riceTotal").innerHTML="Rise 2kg: "+riceTotal;
+document.getElementById( "sugarTotal").innerHTML="Sugar 2kg: "+sugarTotal;
+document.getElementById( "wheatTotal").innerHTML="Wheat 2kg: "+wheatTotal;
+
+
+
+document.getElementById( "total").innerHTML="The total Rupees: "+total;
+document.getElementById( "ChangeTotal").innerHTML="The Changable rice price: "+changeTotal;
+
+
+
+console.log("The total amount is "+ total);
+console.log("The total changable  amount is "+ changeTotal);
+
+
+
+    </script>
+</body>
+</html>
