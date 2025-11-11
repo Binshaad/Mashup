@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System</title>
+</head>
+<body>
+    <h1>Library System</h1>
+    
+    <p id="summery"></p>
+
+    <script>
+        
+        let book={ 
+            title:"The Alchemist",
+            auther:"Paulo Coelho",
+            year:1988,
+            
+        
+
+            getSummery: function(){ 
+                return "The book" + this.title+" "+ "was written by" +" " + this.auther +" "+ "in"+this.year
+            }
+        }
+        
+        function printBookSummery(bookobj){
+            document.getElementById("summery").innerHTML=bookobj.getSummery();
+        }
+        
+        printBookSummery(book);
+        
+    </script>
+</body>
+</html>
