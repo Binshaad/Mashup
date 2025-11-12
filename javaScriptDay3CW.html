@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Feed back form</h1>
+    <h3 id="realFeedBack"></h3>
     <p id="theString"></p>
     <p id="changestring"></p>
     <p id="position"></p>
@@ -14,12 +15,13 @@
     <script>
         
 var feedback = "   I loved the FOOD and the service!   ";
+document.getElementById("realFeedBack").innerHTML=feedback;
 
 var converted=document.getElementById("theString").innerHTML= feedback.trim().toLowerCase();
 var replace=converted.replace("food","ambiance");
 document.getElementById("changestring").innerHTML=replace;
 var position= replace.indexOf("service");
-document.getElementById("position").innerHTML=position;
+document.getElementById("position").innerHTML=`The srvice Starting from:  ${position}`;
 
 var arr=replace.split(" ");
 var string="";
