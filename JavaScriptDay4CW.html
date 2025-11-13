@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="string"></p>
+    <p id="changeto"></p>
+    <p id="differnce"></p>
+    <p id="sqrt"></p>
+    <p id="pie"></p>
+    <p id="multiple"></p>
+    <script>
+       let random= document.getElementById("demo").innerHTML= Math.floor(Math.random()*100)+1;
+
+        let strings= ("75");
+        document.getElementById("string").innerHTML=strings
+
+        let changesto= Number(strings)
+        document.getElementById("changeto").innerHTML=changesto;
+
+        let differnce=Number(random-changesto);
+        document.getElementById("differnce").innerHTML=differnce;
+
+        document.getElementById("sqrt").innerHTML=Math.round(Math.sqrt(changesto));
+        
+         document.getElementById("pie").innerHTML=Math.PI;
+
+         var multiply= "50"*2;
+         document.getElementById("multiple").innerHTML=multiply;
+
+
+
+
+
+         
+
+
+    </script>
+</body>
+</html>
