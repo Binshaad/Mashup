@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAme result</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="string"></p>
+    <p id="changeto"></p>
+    <p id="differnce"></p>
+    <p id="sqrt"></p>
+    <p id="pie"></p>
+    <p id="multiple"></p>
+    <p id="max"></p>
+    <p id="Min"></p>
+    <script>
+       let mystryLevel= document.getElementById("demo").innerHTML= Math.floor(Math.random()*50)+1;
+
+        let strings= ("45");
+        document.getElementById("string").innerHTML=strings
+
+        let changesto= Number(strings)
+        document.getElementById("changeto").innerHTML=changesto;
+
+        let differnce=Math.abs(mystryLevel-changesto);
+        document.getElementById("differnce").innerHTML=differnce;
+
+        document.getElementById("sqrt").innerHTML=Math.round(Math.sqrt(changesto));
+        
+         document.getElementById("pie").innerHTML=Math.PI;
+
+         var multiply= "20"*5;
+         document.getElementById("multiple").innerHTML=multiply;
+
+         document.getElementById("max").innerHTML=Math.max(10,20,mystryLevel);
+         document.getElementById("Min").innerHTML=Math.min(10,20,mystryLevel);
+
+
+
+
+
+
+
+         
+
+
+    </script>
+</body>
+</html>
