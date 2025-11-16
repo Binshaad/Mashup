@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile Page</title>
 </head>
 <body>
+    <button onclick="userDetails()" >Click Here
+
+    </button>
+    <p id="details"></p>
+    <p id="check"></p>
+     <p id="remove"></p>
+
+
+    <script>
+  function userDetails(){
+
+  
     
+    let user={
+        Name:"Jose", 
+        age:20, 
+        admin:true,
+         
+
+    }
+    let theAdmin=(user.age>=18&& user.admin) ?"Access Granted":"Access Denied" ; 
+    document.getElementById("details").innerHTML=theAdmin;
+
+    document.getElementById("check").innerHTML=("age" in user);
+
+    delete user.age;
+    console.log(user);
+
+    
+}
+    </script>
+   
+
 </body>
 </html>
