@@ -6,19 +6,36 @@
     <title>Online store</title>
 </head>
 <body>
-    <button >
+    <button onclick="theorder()" >Click Here
 
     </button>
+    <p id="details"></p>
+    <p id="check"></p>
+     <p id="remove"></p>
 
 
     <script>
+  function theorder(){
+
+  
     
     let order={
         itemName:"Phone", 
-        isDelivered:"Monday", 
-         daysSinceDelivery:3,
+        isDelivered:true, 
+         daysSinceDelivery:6,
+         
+
     }
+    let deliverd=((order.isDelivered&&order.daysSinceDelivery)<7) ?"Eligible for Return":"Return Period Expired" ; 
+    document.getElementById("details").innerHTML=deliverd;
+
+    document.getElementById("check").innerHTML=("itemName" in order);
+
+    delete order.daysSinceDelivery;
+    console.log(order);
+}
     </script>
-    <p id="demo"></p>
+   
+
 </body>
 </html>
