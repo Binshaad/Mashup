@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Result DashBoard</title>
 </head>
 <body>
-    
+    <h1>Student and mark</h1>
+    <p id="details"></p>
+    <h2>Filterd</h2>
+    <p id="filterd"></p>
+    <h2>Total</h2>
+    <p id="totals"></p>
+    <script>
+        let student=["Arun","Abhi","Ramu","Bibin","Gopu"]
+        let mark=[64,75,84,50,44]
+
+        document.getElementById("details").innerHTML=
+        "Studen Name: "+student+"<br>"+
+        "<br>"+
+        "Mark: "+mark
+
+        let filterd=student.filter(function(name,index){
+            return mark[index]>60
+        })
+
+        document.getElementById("filterd").innerHTML=filterd
+
+        let total="";
+        for(i=0;i<mark.length;i++){
+            total +=mark[i]
+        }
+                document.getElementById("totals").innerHTML=total;
+
+    </script>
 </body>
 </html>
