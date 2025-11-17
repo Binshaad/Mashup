@@ -8,6 +8,9 @@
 <body>
     <p id="name"></p>
     <p id="merging"></p>
+    <p id="filterd"></p>
+    <h1>Updated</h1>
+    <p  id="updated"></p>
     <script>
         let productName=["Apple","Orange","Banana","Mango"]
         let ProductPrice=[50,45,70,30]
@@ -16,21 +19,32 @@
         "The products are:"+productName +"<br>"+
         "The price of the each product is :" + ProductPrice
 
-        let merged = productName.concat(ProductPrice);
-        document.getElementById("merging").innerHTML= 
-        "product: "+productName[0]+"--price: "+ProductPrice[0]+"<br>"+
-        "product: "+productName[1]+"--price: "+ProductPrice[1]+"<br>"+
-        "product: "+productName[2]+"--price: "+ProductPrice[2]+"<br>"+
-        "product: "+productName[3]+"--price: "+ProductPrice[3]+"<br>"
-        
-        merged
+    let merged=productName.map(function(productName,index){
+      return "product: "+productName+"--price:"+ProductPrice[index]+"<br>"
 
+    })
+            let toDisplay=""; 
+            for( let i=0;i<merged.length;i++){
+                toDisplay +=merged[i]+"<br>"
+            }
 
-        
-            
+        document.getElementById("merging").innerHTML= toDisplay;
 
-    
-        
+    let filterd=merged.filter(function(value,index){
+        return(ProductPrice[index]>=50)
+    })
+
+document.getElementById("filterd").innerHTML=filterd;
+
+productName.push("Water melon");
+ProductPrice.push(64);
+let updated=productName.map(function(product,index){
+    return "product: "+product+"--price:"+ProductPrice[index]+"<br>"
+
+})
+
+     document.getElementById("updated").innerHTML=updated;
+       
 
     </script>
 </body>
