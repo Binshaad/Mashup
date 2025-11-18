@@ -12,26 +12,61 @@
     <p id="filterd"></p>
     <h2>Total</h2>
     <p id="totals"></p>
+    <h2>Is every one is pass</h2>
+    <p id="pass"></p>
+
+    <h2>More Than 90</h2>
+     <p id="moreThan"></p>
+
+    <h2>Sorted</h2>
+    <p id="sorting"></p>
+    
+    <p id="printing"></p>
     <script>
-        let student=["Arun","Abhi","Ramu","Bibin","Gopu"]
-        let mark=[64,75,84,50,44]
-
+        let student=[{name:"Arun",score:64},
+                    {name:"Abu",score:54},
+                    {name:"Gobi",score:91},
+                    {name:"Sonu",score:44},
+                    {name:"Bibin",score:40},
+       
+    ]
         document.getElementById("details").innerHTML=
-        "Studen Name: "+student+"<br>"+
-        "<br>"+
-        "Mark: "+mark
+        student.map(s=>s.name+"----"+s.score).join("<br>")
+        
 
-        let filterd=student.filter(function(name,index){
-            return mark[index]>60
+        let filterd=student.filter(function(student){
+            return student.score>60
         })
 
-        document.getElementById("filterd").innerHTML=filterd
+        document.getElementById("filterd").innerHTML=
+        filterd.map(s=>s.name).join(",")
 
-        let total="";
-        for(i=0;i<mark.length;i++){
-            total +=mark[i]
-        }
-                document.getElementById("totals").innerHTML=total;
+        let total=student.reduce( function (sum,s){
+           return sum+s.score;},0)
+
+        
+                document.getElementById("totals").innerHTML=total
+
+         let pass=student.every(function(student){
+            return student.score>35
+         })
+        document.getElementById("pass").innerHTML=pass
+
+        let moreScore=student.some(function(student){
+            return student.score>90
+         })
+        document.getElementById("moreThan").innerHTML=moreScore
+
+        
+        let  sorted= student.sort(function(a,b){return b.score-a.score})
+                    document.getElementById("sorting").innerHTML= 
+                    sorted.map(s=>s.name+"-----"+s.score).join("<br>");
+           
+       let printing=mark.map(function(mark,index){
+        return "NAME: "+ name +"  ---MARK: "+mark+"<br>"
+       }) 
+        
+        document.getElementById("printing").innerHTML=printing;
 
     </script>
 </body>
