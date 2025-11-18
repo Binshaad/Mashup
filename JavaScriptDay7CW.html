@@ -6,14 +6,46 @@
     <title>BirthDay</title>
 </head>
 <body>
+    <p id="convert"></p>
+    <p id="theDay"></p>
+    <p id="today"></p>
+    <p id="age"></p>
+    <p id="statment"></p>
     <script>
         let friend={
-            name:"Jhone",
-            DOB:new Date(1999,4,25),
+            name:"Albin",
+            DOB:"1999-04-25",
 
         }
 
-        let getBirthDayDdtails=function()
+    function getBirthdayDetails(friend){
+        let dateOfBirth=new Date(friend.DOB)
+
+        document.getElementById("convert").innerHTML=dateOfBirth
+
+        let year=dateOfBirth.getFullYear();
+        let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+         let monthName=months[dateOfBirth.getMonth()];
+        let date=dateOfBirth.getDate();
+
+       document.getElementById("theDay").innerHTML=
+       "Today: "+year+"-"+monthName+"-"+date
+
+       let today=new Date();
+       document.getElementById("today").innerHTML=today;
+
+       let age=today.getFullYear()-year;
+
+         document.getElementById("age").innerHTML="The AGE of the person is :"+age;
+
+         document.getElementById("statment").innerHTML= friend.name+" was born on "+date+" "+ monthName+","+year+" and is "+age+" years old";
+
+
+
+
+
+    }
+     getBirthdayDetails(friend)
     </script>
 </body>
 </html>
