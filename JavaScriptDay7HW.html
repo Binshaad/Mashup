@@ -3,9 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Event Reminder</title>
 </head>
 <body>
+    <h1>Event Reminder</h1>
+
+    <label>Select a Date</label>
+    <input type="date" id="box">
+    <button onclick="getDetails()">Click here</button>
+
+    <p id="theDate"></p>
+    <p id="YearDifference"></p>
+    <p id="passYr"></p>
+    <p id="message"></p>
+
+<script>
+function getDetails(){
+    let inputValue = document.getElementById("box").value;
+
+   
+    let eventDate = new Date(inputValue);
+    let year = eventDate.getFullYear();
+
+    let months = [
+        "January","February","March","April","May","June",
+        "July","August","September","October","November","December"
+    ];
     
+    let monthName = months[eventDate.getMonth()];
+    let date = eventDate.getDate();
+
+    document.getElementById("theDate").innerHTML =
+        year + "-" + monthName + "-" + date;
+
+        let today=new Date();
+        let YearDifferent=today.getFullYear()-year;
+
+            document.getElementById("YearDifference").innerHTML =YearDifferent
+            let hasPassedThisYear =
+        today.getMonth() > eventDate.getMonth() ||
+        (today.getMonth() === eventDate.getMonth() && today.getDate() >= date);
+
+            document.getElementById("passYr").innerHTML =hasPassedThisYear;
+
+            if(YearDifferent>=1){
+                document.getElementById("message").innerHTML =
+            "It has been more than a year since that dat"
+            }
+            else{
+                document.getElementById("message").innerHTML =
+            ` It has been less than a year since that date.`;
+            }
+
+
+
+}
+</script>
 </body>
 </html>
