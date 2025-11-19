@@ -3,67 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery Calculator</title>
+    <title>GAME</title>
 </head>
 <body>
+    <h1>GAME</h1>
+    <p id="right"></p>
 
-<h1>Grocery Store Calculator</h1>
-<p id="output"></p>
+    <script>
+        let message = "";
 
-<script>
+        for (let i = 1; i <= 5; i++) {
 
-let result = ""; // to display all 5 purchases
+            let number = parseInt(prompt("Guess a number between 1 and 5 "));
 
-for(let i = 1; i <= 5; i++) {
+            // Invalid input
+            if (number < 1 || number > 5) {
+                message += "Invalid input.<br>";
+                continue;  
+            }
 
-    let code = parseInt(prompt("Enter product code (1-3): "));
-    let qty = parseInt(prompt("Enter quantity: "));
-    
-    let price = 0;
-    let name = "";
+            // Convert number to words using switch
+            let word = "";
+            switch (number) {
+                case 1: word = "One"; break;
+                case 2: word = "Two"; break;
+                case 3: word = "Three"; break;
+                case 4: word = "Four"; break;
+                case 5: word = "Five"; break;
+            }
 
-    // if invalid, skip using continue
-    if (code < 1 || code > 3) {
-        result += "Purchase " + i + ": Invalid code. Skipped.<br><br>";
-        continue;
-    }
+            message += "You entered: " + word + "<br>";
 
-    // switch to assign price
-    switch(code){
-        case 1:
-            name = "Apple";
-            price = 30;
-            break;
+            // Correct guess
+            if (number == 3) {
+                message += "You guessed it right!";
+                break;
+            }
 
-        case 2:
-            name = "Banana";
-            price = 10;
-            break;
+            // Wrong guess
+            message += "Wrong guess. Try again.<br><br>";
+        }
 
-        case 3:
-            name = "Mango";
-            price = 50;
-            break;
-    }
-
-    let total = price * qty;
-
-    // High purchase or normal?
-    let message = (total > 100) ? "High purchase" : "Normal purchase";
-
-    // Add result for each purchase
-    result += 
-        "Purchase " + i + ":<br>" +
-        "Fruit: " + name + "<br>" +
-        "Price: ₹" + price + "<br>" +
-        "Quantity: " + qty + "<br>" +
-        "Total: ₹" + total + "<br>" +
-        "Status: " + message + "<br><br>";
-}
-
-document.getElementById("output").innerHTML = result;
-
-</script>
-
+        document.getElementById("right").innerHTML = message;
+    </script>
 </body>
 </html>
