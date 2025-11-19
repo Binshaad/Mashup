@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <h3>Products</h3>
+    <p id="enterValue"></p>
+    
+     <p id="comment"></p>
+    <script>
+
+        document.getElementById("enterValue").innerHTML=
+        "1-Apple"+"<br>"+
+        "2-Bannana"+"<br>"+
+        "3-Mango"
+
+        let finalPrice=""
+for(let i=1;i<=5;i++){
+        let number=parseInt( prompt("Enter the number: "))
+        let quandity=parseInt(prompt("How much quantity: "))
+        if(number<1||number>3){
+     finalPrice+="In valied code"+i;
+    continue;
+        }
+        let price=0;
+        let nameOfFruit=""
+        
+        switch(number){
+            case 1:
+                nameOfFruit="APPLE"
+               price=30;
+             break;
+
+             case 2:
+                nameOfFruit="BANANA"
+               price=10;
+             break;
+
+             case 3:
+                nameOfFruit="MANGO"
+               price=50;
+                
+            
+             break;
+        }
+    
+     let total=price*quandity;
+     let message=(total>100)?"High purchase":"Normal purchase";
+     
+     finalPrice +="purchase No: "+i+"<br>"+
+             "Fruit name: "+nameOfFruit+"<br>"+
+             "Quantity :"+quandity+"<br>"+
+             "Total price:  "+total+"<br>"+
+             "MEssage:  "+message+"<br>"
+
+
+    
+     }
+
+        
+    
+
+
+                 document.getElementById("comment").innerHTML=finalPrice;
+
+
+    </script>
+</body>
+</html>
