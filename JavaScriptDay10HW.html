@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedBAck</title>
+</head>
+<body>
+    <script>
+        let user=`{"contact":"thanks for the product"}`;
+
+        let message=()=>{
+            let person=JSON.parse(user)
+            if(person.contact.toLowerCase().includes("thanks")){
+                console.log("positive feed back Recieved")
+            }
+            else{
+                console.log("Feedback noted");
+            }
+
+            try{
+                person;
+                console.log("There Have no error in the message")
+
+            }
+            catch(err){
+            console.log("JSON is Invalied")
+            }
+        }
+        message();
+    </script>
+</body>
+</html>
