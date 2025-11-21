@@ -1,50 +1,31 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAME</title>
-</head>
+<html>
 <body>
-    <h1>GAME</h1>
-    <p id="right"></p>
 
-    <script>
-        let message = "";
+<h2>JavaScript "this"</h2>
 
-        for (let i = 1; i <= 5; i++) {
+<p>This example demonstrate that in Arrow Functions, the "this" keyword represents the object that owns the function, no matter who calls the function.</p>
 
-            let number = parseInt(prompt("Guess a number between 1 and 5 "));
+<p>Click the button to execute the "hello" function again, and you will see that "this" still  represents the window object.</p>
 
-            // Invalid input
-            if (number < 1 || number > 5) {
-                message += "Invalid input.<br>";
-                continue;  
-            }
+<button id="btn">Click Me!</button>
 
-            // Convert number to words using switch
-            let word = "";
-            switch (number) {
-                case 1: word = "One"; break;
-                case 2: word = "Two"; break;
-                case 3: word = "Three"; break;
-                case 4: word = "Four"; break;
-                case 5: word = "Five"; break;
-            }
+<p id="demo"></p>
 
-            message += "You entered: " + word + "<br>";
+<script>
+var hai;
 
-            // Correct guess
-            if (number == 3) {
-                message += "You guessed it right!";
-                break;
-            }
+haii = () => {
+  document.getElementById("demo").innerHTML += this;
+}
 
-            // Wrong guess
-            message += "Wrong guess. Try again.<br><br>";
-        }
+//The window object calls the function:
+window.addEventListener("load", haii);
 
-        document.getElementById("right").innerHTML = message;
-    </script>
+//A button object calls the function:
+document.getElementById("btn").addEventListener("click", haii);
+</script>
+
 </body>
 </html>
