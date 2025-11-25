@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedBack</title>
+</head>
+<body>
+    <form onsubmit="return validation()">
+        <input type="text" id="name" placeholder="Enter your name" required><br><br>
+        <textarea name="" id="textArea" rows="10" cols="50" required placeholder="FeedBack"></textarea><br>
+        <input type="submit" value="submit">
+         <p id="demo" onmouseover="mOver()" onmouseout="mOut()"></p>
+
+    <p id="confirm"> </p>
+
+        
+    </form>
+   
+   <script>
+function validation(){
+    let text1 = document.getElementById("name").value;
+    let text2 = document.getElementById("textArea").value;
+
+    
+    document.getElementById("demo").innerHTML ="Mr/Ms: "+text1 +"Your FeedBack is : " + text2;
+
+       let msg = document.getElementById("confirm");
+         msg.textContent = "Thanks for your feedback!";
+         msg.style.color = "green";
+
+    return false;
+}
+
+function mOver(){
+    document.getElementById("demo").style.color = "blue";
+}
+
+function mOut(){
+    document.getElementById("demo").style.color = "black";
+}
+
+
+</script>
+</body>
+</html>
