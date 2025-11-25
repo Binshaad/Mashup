@@ -25,9 +25,13 @@ function validation(){
     
     document.getElementById("demo").innerHTML ="Mr/Ms: "+text1 +"Your FeedBack is : " + text2;
 
-       let msg = document.getElementById("confirm");
-         msg.textContent = "Thanks for your feedback!";
-         msg.style.color = "green";
+       let mesage = document.getElementById("confirm");
+         mesage.textContent = "Thanks for your feedback!";
+         mesage.style.color = "green";
+
+         setTimeout(function() {
+        mesage.textContent = "";
+    }, 5000);
 
     return false;
 }
