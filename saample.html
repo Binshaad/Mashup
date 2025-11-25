@@ -3,20 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web page</title>
+    <title>Feedback</title>
 </head>
 <body>
 
-    <p id="demo" onmouseover="mover()" onmouseout="mout()">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima eveniet eius autem iusto rem velit ut doloremque maiores.
-    </p>
+    <form onsubmit="return validation()">
+        <input type="text" id="name" placeholder="Enter your name"><br><br>
+
+        <textarea id="textArea" rows="10" cols="50"></textarea><br>
+
+        <input type="submit" value="submit">
+    </form>
+
+    <p id="demo" onmouseover="mOver()" onmouseout="mOut()"></p>
 
     <script>
-        function mover(){
+        function validation(){
+            let text1 = document.getElementById("name").value;
+            let text2 = document.getElementById("textArea").value;
+
+            // show text in paragraph
+            document.getElementById("demo").innerHTML = text1 + "<br>" + text2;
+
+            return false; // prevent form reload
+        }
+
+        function mOver(){
             document.getElementById("demo").style.color = "blue";
         }
-        function mout(){
-            document.getElementById("demo").style.color = "black"; // back to normal
+
+        function mOut(){
+            document.getElementById("demo").style.color = "black";
         }
     </script>
 
