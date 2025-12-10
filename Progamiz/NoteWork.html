@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>programiz6</title>
+</head>
+<body>
+    <input type="text" id="demo1" placeholder="Enter the name:">
+    <button onclick="myFunction()" >CLick me</button>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        function myFunction(){
+            let a=document.getElementById("demo1").value;
+
+            let b=a.split("").reverse().join("");
+             document.getElementById("demo2").innerHTML=b;
+
+             if(a.toLowerCase() == b.toLowerCase()){
+                          document.getElementById("demo3").innerHTML="It is true";
+
+             }
+
+             else{
+                    document.getElementById("demo3").innerHTML="It is false";
+
+             }
+        }
+    </script>
+</body>
+</html>
