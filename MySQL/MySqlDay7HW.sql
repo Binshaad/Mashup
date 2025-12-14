@@ -1,0 +1,3 @@
+CREATE TABLE `project`.`mobile_app` ( `Id` INT(3) NOT NULL , `Name` VARCHAR(30) NOT NULL , `City` VARCHAR(30) NOT NULL , `score` INT(3) NOT NULL , `bonus` INT(10) NULL DEFAULT NULL , `challenge` VARCHAR(30) NOT NULL ) ENGINE = InnoDB;
+SELECT * FROM `mobile_app` WHERE score>( SELECT AVG(score) FROM mobile_app);
+SELECT Name FROM `mobile_app` WHERE challenge=( SELECT challenge FROM mobile_app WHERE Name ='Farah');
