@@ -1,0 +1,13 @@
+#header{
+   display: grid;
+}
+
+#main{
+    display: grid;
+    background-color: aquamarine;
+
+}
+#footer{
+    display: grid;
+    background-color: blueviolet;
+}
