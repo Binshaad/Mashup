@@ -10,7 +10,7 @@ public class JavaDay3W {
         System.out.println("Enter your age");
         int age=input.nextInt();
 
-        System.out.println("The name of the user is  "+name+"  and Age is "+age);
+        System.out.println("Welcome  "+name+"  Your Age is "+age);
 
         input.close();
         
