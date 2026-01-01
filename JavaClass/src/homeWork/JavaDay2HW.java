@@ -1,3 +1,4 @@
+package homeWork;
 public class JavaDay2HW {
     
     public static void main(String[] args) {

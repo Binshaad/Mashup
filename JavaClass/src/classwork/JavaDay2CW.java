@@ -1,3 +1,4 @@
+package classwork;
 public class JavaDay2CW {
     public static void main(String[] args) {
         int numOfBOok=3;
