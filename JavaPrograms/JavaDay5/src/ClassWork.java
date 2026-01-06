@@ -1,7 +1,13 @@
+
+import java.util.Arrays;
+
+
 public class ClassWork {
 
     public static void main(String[] args) {
-        int [] mark={92,69,85,72,45};
+        System.out.println(Arrays.toString(args));
+       
+        int[] mark = {92,69,85,72,45};
         for(int i=0;i<mark.length;i++){
             if(mark[i]>=90){
                 System.out.println("You are Excellent!!!!!");
