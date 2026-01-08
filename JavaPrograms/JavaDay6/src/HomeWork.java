@@ -1,3 +1,4 @@
+
 public class HomeWork {
     public static void main(String[] args) {
         int[] arr={78, 82, 91, 65, 34};
